@@ -1,0 +1,127 @@
+<h2>Budget</h2>
+<p>The following table estimates the costs of building the website for Geek Stuff and all its features</p>
+<table id="estimate">
+<caption>Time and Cost Estimate</caption>
+  <thead>
+    <tr>
+      <th>Requirement</th>
+      <th>Vendor</th>
+      <th>Responsibility</th>
+      <th>Deadline</th>
+      <th>Hrs/Qty</th>
+      <th>Rate</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+   <th>Domain name subscription</th>
+     <td><a target="_blank" href="https://in.godaddy.com/">GoDaddy</a></td>
+     <td>GoDaddy will provide ownership of the domain name</td>
+     <td>Cancels 04/24/2019</td>
+     <td>1 domain</td>
+     <td>$1.17</td>
+     <td class="sum">1.17</td>  
+  </tr>
+  <tr>
+   <th>Web Hosting</th>
+     <td><a target="_blank" href="https://in.godaddy.com/">GoDaddy</a></td>
+     <td>GoDaddy provides the cPanel and hosting services.</td>
+     <td>Cancels 04/23/2019</td>
+     <td>1 item</td>
+     <td>$12</td>
+     <td class="sum">12</td>
+    </tr>
+   <th>GoDaddy user privacy</th>
+     <td><a target="_blank" href="https://in.godaddy.com/">GoDaddy</a></td>
+     <td>GoDaddy keeps the user's information private.</td>
+     <td>Cancels 04/24/2019</td>
+     <td>1 item</td>
+     <td>$6.80</td>
+     <td class="sum">6.80</td>
+    </tr>  
+    <tr>
+     <th>Website Security</th>
+       <td><a target="_blank" href="https://in.godaddy.com/">GoDaddy</a></td>
+       <td>GoDaddy monitors the website for malware and fixes any security issue upon request.</td>
+       <td>Cancels 06/27/2018</td>
+       <td>1 item</td>
+       <td>$6.99</td>
+       <td class="sum">6.99</td>
+    </tr>
+       <th>Site Installation, configuration</th>
+       <td>Teresita Nader</td>
+       <td>Install WordPress and add plugins</td>
+       <td>N/A</td>
+       <td>27 hrs</td>
+       <td>$19.68</td>
+       <td class="sum">531.36</td>
+    </tr>
+       <th>Logo design, color scheme, fonts, icons</th>
+       <td>Teresita Nader</td>
+       <td>Design logo, choose color scheme, add fonts and icons to the website.</td>
+       <td>N/A</td>
+       <td>13 hrs</td>
+       <td>$19.68</td>
+       <td class="sum">255.84</td>
+    </tr>
+    <tr>
+     <th>Writing of 16 number of pages</th>
+       <td>Teresita Nader</td>
+       <td>Write the content of the pages.</td>
+       <td>N/A</td>
+       <td>22 hrs</td>
+       <td>$19.68</td>
+       <td class="sum">432.96</td>
+    </tr>
+    <tr>
+     <th>Photography, Videography, drawing, optimization</th>
+       <td>Teresita Nader</td>
+       <td>Take pictures of the products, and optimize images.</td>
+       <td>N/A</td>
+       <td>2 hrs</td>
+       <td>$18.78</td>
+       <td class="sum">37.56</td>
+    </tr>
+    <tr>
+    <tr>
+     <th>E-commerce fees for total number of sales</th>
+       <td>WooCommerce and Paypal</td>
+       <td>Fees for transaction</td>
+       <td>N/A</td>
+       <td>1 item</td>
+       <td>$0</td>
+       <td class="sum">0</td>
+    </tr>
+    <tr>
+     <th>Set up of Search Console, Analytics, and Analysis</th>
+       <td>Teresita Nader</td>
+       <td>Install and configure Google analytics</td>
+       <td>N/A</td>
+       <td>5 hrs</td>
+       <td>$19.68</td>
+       <td class="sum">98.4</td>
+    </tr> 
+    <tr>
+     <th>Promotional activity 1.</th>
+       <td>Teresita Nader</td>
+       <td>AdWords</td>
+       <td>Cancels 6/14/2018</td>
+       <td>1 Ad</td>
+       <td>$0.2 per click</td>
+       <td class="sum">0</td> <!-- sumtotal cost -->
+    </tr> 
+</tbody>
+</table>
+
+<script>
+// Add 1 column of numbers. Author unknown
+    var tds = document.getElementById('estimate').getElementsByTagName('td');
+    var sum = 0;
+    for(var i = 0; i < tds.length; i ++) {
+        if(tds[i].className == 'sum') {
+            sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+    }
+    document.getElementById('estimate').innerHTML += '<tfoot><tr class="total"><td colspan="6">total</td><td>$' + sum + '</td></tr></tfoot>';
+</script>
